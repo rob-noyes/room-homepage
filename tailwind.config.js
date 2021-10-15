@@ -7,6 +7,9 @@ module.exports = {
       fontFamily: {
         spartan: ['Spartan', 'sans-serif'],
       },
+      letterSpacing: {
+        realwide: '0.5rem',
+      },
     },
   },
   variants: {
