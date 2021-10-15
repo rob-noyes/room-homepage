@@ -1,14 +1,16 @@
-import Header from './Header';
-import { FaGreaterThan, FaLessThan } from 'react-icons/fa';
+//Carousel for images, when buttons clicked the image changes
 
-const Carousel = ({ navbarOpen, handleNavbar }) => {
+const Carousel = () => {
   return (
-    <div classname="bg-mobile1">
-      <Header navbar={navbarOpen} onClick={handleNavbar} />
+    <div>
       <div className="flex flex-col justify-end text-lg text-white">
-        <img src="images/mobile-image-hero-1.jpg" />
-        <button className="fixed right-14 bg-black px-6 py-4">&lt;</button>
-        <button className="fixed right-0 bg-black px-6 py-4">&gt;</button>
+        <img
+          src="images/mobile1.jpg"
+          alt="contemporary chairs on dispaly by table"
+          className="object-contain"
+        />
+        <button className="absolute right-14 bg-black px-6 py-4">&lt;</button>
+        <button className="absolute right-0 bg-black px-6 py-4">&gt;</button>
       </div>
     </div>
   );

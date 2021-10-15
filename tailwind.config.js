@@ -3,8 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      backgroundImage: {
-        mobile1: "url('/src/images/mobile-image-hero-1.jpg')",
+      backgroundImage: {},
+      fontFamily: {
+        spartan: ['Spartan', 'sans-serif'],
       },
     },
   },

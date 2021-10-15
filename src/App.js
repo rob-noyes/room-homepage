@@ -10,16 +10,18 @@ function App() {
   const handleNavbar = () => {
     setNavbarOpen(!navbarOpen);
   };
+
   return (
-    <div
-      className={
-        navbarOpen
-          ? 'transition duration-500 ease-in-out bg-gray-400 z-10 h-screen'
-          : 'transition duration-500 ease-in-out bg-gray-600 h-screen'
-      }
-    >
-      <Carousel navbarOpen={navbarOpen} handleNavbar={handleNavbar} />
-      <MainContent />
+    <div className=" font-spartan transition duration-500 ease-in-out bg-white ">
+      <Header navbar={navbarOpen} onClick={handleNavbar} />
+      <div className={navbarOpen ? ' h-screen opacity-20 z-20' : ''}>
+        <Carousel
+          navbarOpen={navbarOpen}
+          handleNavbar={handleNavbar}
+          navbar={navbarOpen}
+        />
+        <MainContent />
+      </div>
     </div>
   );
 }
