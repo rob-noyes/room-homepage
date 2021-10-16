@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Carousel from './components/Carousel';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import MainContent from './components/MainContent';
 
@@ -22,6 +23,7 @@ function App() {
         />
         <MainContent />
       </div>
+      <Footer />
     </div>
   );
 }
