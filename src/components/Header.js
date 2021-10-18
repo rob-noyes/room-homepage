@@ -4,24 +4,24 @@ const Header = ({ navbar, onClick }) => {
   return (
     <nav
       className={
-        'absolute py-5 z-10 ' +
-        (navbar ? 'bg-white' : ' bg-none lg:justify-start lg:p-10')
+        'absolute py-5 z-10 lg:flex' +
+        (navbar ? 'bg-white' : ' bg-none lg:justify-start')
       }
     >
       <button
         className={
           navbar
             ? 'absolute left-0 m-3 p-4 pt-4 text-2xl lg:hidden text-black'
-            : 'absolute left-0 m-3 p-4 pt-4 text-2xl lg:hidden text-white'
+            : 'absolute left-0 m-3 p-4 pt-4 text-2xl lg:hidden lg:m-0 text-white'
         }
         onClick={onClick}
       >
         <FaBars />
       </button>
-      <div className="flex w-screen justify-center text-4xl lg:flex text-white">
+      <div className="flex w-screen justify-center text-4xl lg:flex lg:justify-start text-white lg:pt-8 lg:pl-12">
         <h3 className={navbar ? 'hidden ' : 'py-4'}>room</h3>
       </div>
-      <div className="lg:flex lg:items-center lg:justify-center lg:px-4">
+      <div className="lg:absolute lg:left-32 lg:px-4 lg:text-white lg:pt-14 lg:pl-16">
         <ul
           className={
             navbar
