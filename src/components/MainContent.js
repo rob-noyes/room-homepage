@@ -3,7 +3,7 @@ const MainContent = () => {
     <div className="flex flex-col justify-center items-center lg:grid lg:grid-cols-thirds lg:items-stretch h-full">
       <div className="pt-16 lg:pt-0">
         <img
-          src="/images/imagedark.jpg"
+          src="./images/imagedark.jpg"
           alt=""
           className="lg:h-full object-cover lg:w-full"
         />
@@ -21,7 +21,7 @@ const MainContent = () => {
       </div>
       <div className="pt-16 lg:pt-0">
         <img
-          src="/images/imagelight.jpg"
+          src="./images/imagelight.jpg"
           alt=""
           className="lg:h-full object-cover lg:w-full"
         />
