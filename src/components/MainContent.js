@@ -1,6 +1,6 @@
 const MainContent = () => {
   return (
-    <div className="flex flex-col justify-center items-center lg:grid lg:grid-cols-thirds lg:items-stretch">
+    <div className="flex flex-col justify-center items-center lg:grid lg:grid-cols-thirds lg:items-stretch lg:h-full">
       <div className="pt-16 lg:pt-0">
         <img
           src="./images/imagedark.jpg"
@@ -9,8 +9,8 @@ const MainContent = () => {
         />
       </div>
       <div className="text-black px-8 lg:p-12 lg:h-full lg:flex lg:flex-col lg:align-center lg:justify-center">
-        <h2 className="text-2xl mt-8  lg:text-2xl">ABOUT OUR FURNITURE</h2>
-        <p className="text-gray-800 text-sm lg:text-md mt-4">
+        <h2 className="text-2xl mt-8  lg:text-3xl">ABOUT OUR FURNITURE</h2>
+        <p className="text-gray-800 text-sm lg:text-lg mt-4">
           Our multifunctional collection blends design and function to suit your
           individual taste. Make each room unique, or pick a cohesive theme that
           best express your interests and what inspires you. Find the furniture
