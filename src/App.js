@@ -21,11 +21,13 @@ function App() {
           handleNavbar={handleNavbar}
           navbar={navbarOpen}
         />
-        <div className="lg:h-virtual">
+        <div className="lg:h-full">
           <MainContent />
         </div>
       </div>
-      <Footer />
+      <div className="flex bottom-0 left-0">
+        <Footer />
+      </div>
     </div>
   );
 }

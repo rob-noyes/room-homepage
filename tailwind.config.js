@@ -22,7 +22,7 @@ module.exports = {
         82: '20.3rem',
       },
       margin: {
-        middle: '40%',
+        middle: '30%',
       },
       height: {
         virtual: '40vh',

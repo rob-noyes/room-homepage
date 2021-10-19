@@ -80,7 +80,7 @@ const ImagePicker = () => {
             <img src="images/icon-angle-right.svg" alt="arrow right" />
           </button>
         </div>
-        <div className="pt-8 lg:mt-middle lg:mb-10">
+        <div className="pt-8 lg:my-middle lg:mb-12">
           <Tile header={currentImage.title} text={currentImage.text} />
           <button className="text-sm px-8 mt-4 py-4 tracking-realwide flex items-center justify-center lg:px-14">
             SHOP NOW
