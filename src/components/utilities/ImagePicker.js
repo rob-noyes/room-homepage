@@ -56,12 +56,12 @@ const ImagePicker = () => {
   };
 
   return (
-    <div className="lg:grid lg:grid-cols-divide">
+    <div className="lg:grid lg:grid-cols-divide lg:h-full">
       <div className="transition-all duration-500 ease-in flex flex-col justify-end text-lg text-white lg:w-full lg:flex-col">
         <img
           src={currentImageLarge.src}
           alt="contemporary chairs on display by table"
-          className="object-contain lg:w-auto lg:h-full"
+          className="object-cover lg:w-auto lg:h-full"
         />
       </div>
 
