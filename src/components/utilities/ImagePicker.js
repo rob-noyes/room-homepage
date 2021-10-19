@@ -57,7 +57,7 @@ const ImagePicker = () => {
 
   return (
     <div className="lg:grid lg:grid-cols-divide">
-      <div className="transition-all duration-500 ease-in flex flex-col justify-end text-lg text-white lg:w-full lg:h-full">
+      <div className="transition-all duration-500 ease-in flex flex-col justify-end text-lg text-white lg:w-full lg:flex-col">
         <img
           src={currentImageLarge.src}
           alt="contemporary chairs on display by table"
@@ -65,24 +65,42 @@ const ImagePicker = () => {
         />
       </div>
 
-      <div className="pt-16 lg:flex lg:flex-col lg:align-center lg:justify-center">
-        <button
-          onClick={leftClick}
-          className="absolute right-14 top-46 bg-black px-6 py-4 lg:flex"
-        >
-          <img src="images/icon-angle-left.svg" alt="arrow left" />
-        </button>
-        <button
-          onClick={rightClick}
-          className="absolute right-0 top-46 bg-black px-6 py-4"
-        >
-          <img src="images/icon-angle-right.svg" alt="arrow right" />
-        </button>
-        <Tile header={currentImage.title} text={currentImage.text} />
-        <button className="text-sm px-8 mt-4 py-4 tracking-realwide flex items-center justify-center lg:px-14">
-          SHOP NOW
-          <img className="px-8" src="/images/icon-arrow.svg" alt="" />
-        </button>
+      <div className="lg:flex lg:flex-col lg:align-center lg:justify-between">
+        <div className="flex flex-row justify-end lg:hidden">
+          <button
+            onClick={leftClick}
+            className="bg-black px-6 py-4 lg:px-8 lg:py-6"
+          >
+            <img src="images/icon-angle-left.svg" alt="arrow left" />
+          </button>
+          <button
+            onClick={rightClick}
+            className="bg-black px-6 py-4 lg:px-8 lg:py-6"
+          >
+            <img src="images/icon-angle-right.svg" alt="arrow right" />
+          </button>
+        </div>
+        <div className="pt-8 lg:mt-middle lg:mb-10">
+          <Tile header={currentImage.title} text={currentImage.text} />
+          <button className="text-sm px-8 mt-4 py-4 tracking-realwide flex items-center justify-center lg:px-14">
+            SHOP NOW
+            <img className="px-8" src="/images/icon-arrow.svg" alt="" />
+          </button>
+        </div>
+        <div className="hidden lg:flex lg:flex-row">
+          <button
+            onClick={leftClick}
+            className="bg-black px-6 py-4 lg:px-8 lg:py-6"
+          >
+            <img src="images/icon-angle-left.svg" alt="arrow left" />
+          </button>
+          <button
+            onClick={rightClick}
+            className="bg-black px-6 py-4 lg:px-8 lg:py-6"
+          >
+            <img src="images/icon-angle-right.svg" alt="arrow right" />
+          </button>
+        </div>
       </div>
     </div>
   );

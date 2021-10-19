@@ -13,7 +13,7 @@ function App() {
   };
 
   return (
-    <div className=" font-spartan transition duration-500 ease-in-out bg-white ">
+    <div className=" font-spartan transition duration-500 ease-in-out bg-white w-screen ">
       <Header navbar={navbarOpen} onClick={handleNavbar} />
       <div className={navbarOpen ? ' h-screen opacity-20 z-20' : ''}>
         <Carousel

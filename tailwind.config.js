@@ -8,8 +8,8 @@ module.exports = {
         light: "url('/src/components/images/imagelight.jpg')",
       },
       gridTemplateColumns: {
-        divide: '66% 33%',
-        thirds: '33% 33% 33%',
+        divide: '67% 33%',
+        thirds: '33% 34% 33%',
       },
       fontFamily: {
         spartan: ['Spartan', 'sans-serif'],
@@ -20,6 +20,9 @@ module.exports = {
       inset: {
         46: '11.4rem',
         82: '20.3rem',
+      },
+      margin: {
+        middle: '40%',
       },
     },
   },
