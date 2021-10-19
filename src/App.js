@@ -21,7 +21,9 @@ function App() {
           handleNavbar={handleNavbar}
           navbar={navbarOpen}
         />
-        <MainContent />
+        <div className="lg:h-virtual">
+          <MainContent />
+        </div>
       </div>
       <Footer />
     </div>

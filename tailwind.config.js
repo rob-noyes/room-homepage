@@ -24,6 +24,9 @@ module.exports = {
       margin: {
         middle: '40%',
       },
+      height: {
+        virtual: '40vh',
+      },
     },
   },
   variants: {
