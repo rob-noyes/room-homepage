@@ -1,6 +1,6 @@
 const MainContent = () => {
   return (
-    <div className="lg:grid lg:grid-cols-thirds h-full">
+    <div className="flex flex-col justify-center items-center lg:grid lg:grid-cols-thirds lg:items-stretch h-full">
       <div className="pt-16 lg:pt-0">
         <img
           src="/images/imagedark.jpg"
