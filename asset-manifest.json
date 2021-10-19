@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/room-homepage/static/css/main.6b728b99.chunk.css",
-    "main.js": "/room-homepage/static/js/main.7b7db603.chunk.js",
-    "main.js.map": "/room-homepage/static/js/main.7b7db603.chunk.js.map",
+    "main.css": "/room-homepage/static/css/main.816815ad.chunk.css",
+    "main.js": "/room-homepage/static/js/main.8d962a90.chunk.js",
+    "main.js.map": "/room-homepage/static/js/main.8d962a90.chunk.js.map",
     "runtime-main.js": "/room-homepage/static/js/runtime-main.ff491a58.js",
     "runtime-main.js.map": "/room-homepage/static/js/runtime-main.ff491a58.js.map",
     "static/js/2.71a84b32.chunk.js": "/room-homepage/static/js/2.71a84b32.chunk.js",
     "static/js/2.71a84b32.chunk.js.map": "/room-homepage/static/js/2.71a84b32.chunk.js.map",
     "index.html": "/room-homepage/index.html",
-    "static/css/main.6b728b99.chunk.css.map": "/room-homepage/static/css/main.6b728b99.chunk.css.map",
+    "static/css/main.816815ad.chunk.css.map": "/room-homepage/static/css/main.816815ad.chunk.css.map",
     "static/js/2.71a84b32.chunk.js.LICENSE.txt": "/room-homepage/static/js/2.71a84b32.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ff491a58.js",
     "static/js/2.71a84b32.chunk.js",
-    "static/css/main.6b728b99.chunk.css",
-    "static/js/main.7b7db603.chunk.js"
+    "static/css/main.816815ad.chunk.css",
+    "static/js/main.8d962a90.chunk.js"
   ]
 }
