@@ -1,4 +1,5 @@
 import { FaBars } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Header = ({ navbar, onClick }) => {
   return (
@@ -19,7 +20,9 @@ const Header = ({ navbar, onClick }) => {
         <FaBars />
       </button>
       <div className="flex w-screen justify-center text-4xl lg:flex lg:justify-start text-white lg:pt-8 lg:pl-12">
-        <h3 className={navbar ? 'hidden ' : 'py-4'}>room</h3>
+        <h3 className={navbar ? 'hidden ' : 'py-4'}>
+          <Link to="/">room</Link>
+        </h3>
       </div>
       <div className="lg:absolute lg:left-32 lg:px-4 lg:text-white lg:pt-14 lg:pl-16">
         <ul
@@ -29,10 +32,18 @@ const Header = ({ navbar, onClick }) => {
               : ' transition-all duration-500 hidden lg:flex '
           }
         >
-          <li className="px-2 lg:px-4">home</li>
-          <li className="px-2 lg:px-4">shop</li>
-          <li className="px-2 lg:px-4">about</li>
-          <li className="px-2 lg:px-4">contact</li>
+          <li className="px-2 lg:px-4">
+            <Link to="/">home</Link>
+          </li>
+          <li className="px-2 lg:px-4">
+            <Link to="/shop">shop</Link>
+          </li>
+          <li className="px-2 lg:px-4">
+            <Link to="/about">about</Link>
+          </li>
+          <li className="px-2 lg:px-4">
+            <Link to="/contact">contact</Link>
+          </li>
         </ul>
       </div>
     </nav>
