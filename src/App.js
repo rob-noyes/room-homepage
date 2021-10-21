@@ -6,8 +6,10 @@ import Header from './components/Header';
 import MainContent from './components/MainContent';
 
 function App() {
+  //State of the navbar being opened or closed with bool
   const [navbarOpen, setNavbarOpen] = useState(false);
 
+  //sets the state of the navbar to be open or closed
   const handleNavbar = () => {
     setNavbarOpen(!navbarOpen);
   };
