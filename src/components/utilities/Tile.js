@@ -1,3 +1,4 @@
+//Tile layout for title and paragraph
 const Tile = ({ header, text }) => {
   return (
     <div className="text-black px-8 lg:px-14 lg:flex lg:flex-col lg:justify-center lg:items-center">

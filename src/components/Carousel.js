@@ -1,5 +1,6 @@
 //Carousel for images, when buttons clicked the image changes
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Tile from './utilities/Tile';
 
 const Carousel = () => {
@@ -20,9 +21,11 @@ const Carousel = () => {
       text: 'Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.',
     },
   ]);
+  //state for the current image and text position from largeimage array
   const [currentPosition, setCurrentPosition] = useState(0);
   let currentImage = largeImage[currentPosition];
 
+  //clicking right ternary operator, if position is not equal to end of the array, go to one positon right, otherwise set it to the beginning
   const rightClick = () => {
     currentPosition !== largeImage.length - 1
       ? setCurrentPosition(currentPosition + 1)
@@ -30,6 +33,7 @@ const Carousel = () => {
     currentImage = largeImage[currentPosition];
   };
 
+  //Same setup as right click, but finding if the position is not equal to 0
   const leftClick = () => {
     currentPosition !== 0
       ? setCurrentPosition(currentPosition - 1)
@@ -39,6 +43,7 @@ const Carousel = () => {
 
   return (
     <div className="lg:grid lg:grid-cols-divide lg:h-full">
+      {/* image will change based on the currentImage variable  */}
       <div className="transition-all duration-500 ease-in flex flex-col justify-end text-lg text-white lg:w-full lg:flex-col">
         <img
           src={currentImage.src}
@@ -49,6 +54,7 @@ const Carousel = () => {
 
       <div className="lg:flex lg:flex-col lg:align-center lg:justify-between">
         <div className="flex flex-row justify-end lg:hidden">
+          {/* Buttons will run with click event through react functiona component */}
           <button
             onClick={leftClick}
             className="bg-black px-6 py-4 lg:px-8 lg:py-6"
@@ -64,10 +70,14 @@ const Carousel = () => {
         </div>
         <div className="pt-8 lg:my-middle lg:mb-12">
           <Tile header={currentImage.title} text={currentImage.text} />
-          <button className="text-sm px-8 mt-4 py-4 tracking-realwide flex items-center justify-center lg:px-14">
-            SHOP NOW
-            <img className="px-8" src="./images/icon-arrow.svg" alt="" />
-          </button>
+          <div className="flex flex-row">
+            <Link to="/shop">
+              <h3 className="text-sm px-8 mt-4 py-4 tracking-realwide flex lg:px-14">
+                SHOP NOW
+                <img className="px-6" src="./images/icon-arrow.svg" alt="" />
+              </h3>
+            </Link>
+          </div>
         </div>
         <div className="hidden lg:flex lg:flex-row">
           <button
