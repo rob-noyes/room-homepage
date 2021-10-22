@@ -19,15 +19,7 @@ const Header = ({ navbar, onClick }) => {
       >
         <FaBars />
       </button>
-      <button
-        className={
-          navbar
-            ? 'hidden'
-            : 'absolute right-0 m-3 p-4 pt-4 text-2xl text-white'
-        }
-      >
-        <FaShoppingCart />
-      </button>
+
       <div className="flex w-screen justify-center text-4xl lg:flex lg:justify-start text-white lg:pt-8 lg:pl-12">
         <h3 className={navbar ? 'hidden ' : 'py-4 text-white'}>
           <Link to="/">room</Link>
