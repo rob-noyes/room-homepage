@@ -6,6 +6,7 @@ module.exports = {
       backgroundImage: {
         dark: "url('/src/components/images/imagedark.jpg')",
         light: "url('/src/components/images/imagelight.jpg')",
+        office: "url('/src/components/images/cart/office.jpg')",
       },
       gridTemplateColumns: {
         divide: '67% 33%',

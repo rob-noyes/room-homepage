@@ -1,4 +1,4 @@
-import { FaBars, FaShoppingCart } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Header = ({ navbar, onClick }) => {
@@ -6,7 +6,7 @@ const Header = ({ navbar, onClick }) => {
     <nav
       className={
         'absolute py-5 z-10 lg:flex' +
-        (navbar ? 'bg-black' : ' bg-none lg:justify-start')
+        (navbar ? ' ' : ' bg-none lg:justify-start')
       }
     >
       <button
