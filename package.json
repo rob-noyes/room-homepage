@@ -24,6 +24,7 @@
     "test": "craco test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://rob-noyes.github.io/room-homepage",
 
   "eslintConfig": {
     "extends": [
