@@ -32,7 +32,7 @@ const Shop = ({ products, shoppingCart, setShoppingCart }) => {
           <FaShoppingCart />
         </Link>
       </div>
-      <div className={navbarOpen ? ' h-screen z-20' : ''}>
+      <div className={navbarOpen ? ' h-screen z-20 opacity-20' : ''}>
         <img src="./images/shop/greencouch.jpg" alt="leather couch"></img>
         <div className="grid grid-cols-2 gap-3 justify-items-center pt-4 mx-4">
           {products.map((product) => {
