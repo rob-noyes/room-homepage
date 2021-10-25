@@ -1,5 +1,6 @@
 import Header from '../Header';
 import React, { useState } from 'react';
+import { FaTrash } from 'react-icons/fa';
 
 const Cart = ({ shoppingCart }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -23,15 +24,20 @@ const Cart = ({ shoppingCart }) => {
                 />
                 <h3 className="p-2 text-lg ">{cartItem.title}</h3>
                 <p className="p-2 text-sm">{cartItem.text}</p>
-                <div className="">
-                  <button className="px-3 m-2 py-1 shadow-md rounded-full">
-                    -
-                  </button>
+                <p>Quantity: {cartItem.amount}</p>
+                <div>
                   <button className="px-3 m-2 py-1 shadow-md rounded-full">
                     +
                   </button>
+                  <button className="px-3 m-2 py-1 shadow-md rounded-full">
+                    -
+                  </button>
                 </div>
-                <p>Quantity: {cartItem.amount}</p>
+                <div className="flex justify-center">
+                  <button className=" px-3 m-2 py-3 w-3/12 shadow-md rounded-full">
+                    <FaTrash />
+                  </button>
+                </div>
               </div>
             );
           })}

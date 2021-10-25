@@ -20,6 +20,7 @@ const Routes = () => {
       title: 'Modern Dark Stool',
       text: 'Elegent Styled Modern Stool',
       image: './images/shop/stool.jpg',
+      amount: 1,
     },
   ]);
   const [products, setProducts] = useState([
@@ -28,38 +29,54 @@ const Routes = () => {
       title: 'Modern Cabinet',
       text: 'Styled Modern Wood Cabinet',
       image: './images/shop/cabinet.jpeg',
+      amount: 1,
     },
     {
       id: 1,
       title: 'Modern Dark Stool',
       text: 'Elegent Styled Modern Stool',
       image: './images/shop/stool.jpg',
+      amount: 1,
     },
     {
       id: 2,
       title: 'Nightstand',
       text: 'Elegent Styled Modern Stool',
       image: './images/shop/nightstand.jpg',
+      amount: 1,
     },
     {
       id: 3,
       title: 'Dresser',
       text: 'Mid Century Modern Dresser',
       image: './images/shop/dresser.jpg',
+      amount: 1,
     },
     {
       id: 4,
       title: 'Pink Chair',
       text: 'Modern Pink Armchair',
       image: './images/shop/pinkchair.jpg',
+      amount: 1,
     },
     {
       id: 5,
       title: 'Armless Chair',
       text: 'Sleek Retro Style Armless Chair',
       image: './images/shop/armlesschair.jpg',
+      amount: 1,
     },
   ]);
+
+  const addToCart = (event) => {
+    setShoppingCart((shoppingCart) => [...shoppingCart, event]);
+  };
+
+  const removeFromCart = (event) => {
+    let cartCopy = [...shoppingCart];
+    cartCopy = cartCopy.filter((cartItem) => cartItem.id !== event.id);
+    setShoppingCart(cartCopy);
+  };
 
   return (
     <BrowserRouter>
@@ -77,7 +94,7 @@ const Routes = () => {
             <Shop
               products={products}
               shoppingCart={shoppingCart}
-              setShoppingCart={setShoppingCart}
+              onClick={addToCart}
             />
           )}
         />

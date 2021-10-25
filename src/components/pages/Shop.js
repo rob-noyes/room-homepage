@@ -5,12 +5,12 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Footer from '../Footer';
 
-const Shop = ({ products, shoppingCart, setShoppingCart }) => {
-  const addToCart = (event) => {
-    console.log(event.target.value);
-    setShoppingCart((shoppingCart) => [...shoppingCart, event.target.value]);
-    console.log(shoppingCart);
-  };
+const Shop = ({ products, shoppingCart, onClick }) => {
+  // const addToCart = (event) => {
+  //   console.log(event.target.value);
+  //   setShoppingCart((shoppingCart) => [...shoppingCart, event.target.value]);
+  //   console.log(shoppingCart);
+  // };
 
   const [navbarOpen, setNavbarOpen] = useState(false);
 
@@ -39,11 +39,11 @@ const Shop = ({ products, shoppingCart, setShoppingCart }) => {
             return (
               <ShopCard
                 key={product.id}
-                product={product}
+                value={product}
                 title={product.title}
                 text={product.text}
                 image={product.image}
-                clickAdd={addToCart}
+                clickAdd={() => onClick(product)}
               />
             );
           })}
