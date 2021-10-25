@@ -21,7 +21,7 @@ const MainContent = () => {
       </div>
       <div className="pt-16 lg:pt-0">
         <img
-          src="./images/imagelight.jpg"
+          src="./room-homepage/images/imagelight.jpg"
           alt=""
           className="lg:h-full object-cover lg:w-full"
         />
