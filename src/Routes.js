@@ -1,5 +1,5 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import App from './App';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
@@ -8,7 +8,7 @@ import Cart from './components/pages/Cart';
 
 const Routes = () => {
   const [shoppingCart, setShoppingCart] = useState([]);
-  const [products, setProducts] = useState([
+  const [products] = useState([
     {
       id: 0,
       title: 'Modern Cabinet',
@@ -69,6 +69,7 @@ const Routes = () => {
   };
 
   const addQuantity = (item) => {
+    console.log(item);
     item.amount += 1;
     setShoppingCart([...shoppingCart]);
   };

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { MdArrowBackIos } from 'react-icons/md';
 import { FaTrash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import CartContent from '../utilities/CartContent';
 
 const Cart = ({ shoppingCart, onRemove, addQuantity, removeQuantity }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -26,40 +27,12 @@ const Cart = ({ shoppingCart, onRemove, addQuantity, removeQuantity }) => {
         <div className="grid grid-cols-2 gap-2 justify-items-center pt-4 mx-4">
           {shoppingCart.map((cartItem) => {
             return (
-              <div
-                className="flex flex-col w-full h-auto border-black rounded-lg text-center shadow-lg"
-                key={cartItem.id}
-              >
-                <img
-                  className="pb-4 w-full h-full rounded-lg"
-                  src={cartItem.image}
-                  alt=""
-                />
-                <h3 className="p-2 text-lg ">{cartItem.title}</h3>
-                <p>Quantity: {cartItem.amount}</p>
-                <div>
-                  <button
-                    className="px-3 m-2 py-1 shadow-md rounded-full"
-                    onClick={() => addQuantity(cartItem)}
-                  >
-                    +
-                  </button>
-                  <button
-                    className="px-3 m-2 py-1 shadow-md rounded-full"
-                    onClick={() => removeQuantity(cartItem)}
-                  >
-                    -
-                  </button>
-                </div>
-                <div className="flex justify-center">
-                  <button
-                    className=" px-3 m-2 py-3 w-3/12 shadow-md rounded-full"
-                    onClick={() => onRemove(cartItem)}
-                  >
-                    <FaTrash />
-                  </button>
-                </div>
-              </div>
+              <CartContent
+                removeQuantity={() => removeQuantity(cartItem)}
+                addQuantity={() => addQuantity(cartItem)}
+                cartItem={cartItem}
+                onRemove={() => onRemove(cartItem)}
+              />
             );
           })}
         </div>
