@@ -24,7 +24,7 @@ const Cart = ({ shoppingCart, onRemove, addQuantity, removeQuantity }) => {
             </Link>
           </button>
         </div>
-        <div className="grid grid-cols-2 gap-2 justify-items-center pt-4 mx-4">
+        <div className="grid grid-cols-2 gap-2 justify-items-center pt-4 mx-4 p-2">
           {shoppingCart.map((cartItem) => {
             return (
               <CartContent
