@@ -7,22 +7,7 @@ import Shop from './components/pages/Shop';
 import Cart from './components/pages/Cart';
 
 const Routes = () => {
-  const [shoppingCart, setShoppingCart] = useState([
-    {
-      id: 0,
-      title: 'Modern Cabinet',
-      text: 'Styled Modern Wood Cabinet',
-      image: './images/shop/cabinet.jpeg',
-      amount: 1,
-    },
-    {
-      id: 1,
-      title: 'Modern Dark Stool',
-      text: 'Elegent Styled Modern Stool',
-      image: './images/shop/stool.jpg',
-      amount: 1,
-    },
-  ]);
+  const [shoppingCart, setShoppingCart] = useState([]);
   const [products, setProducts] = useState([
     {
       id: 0,
@@ -69,13 +54,32 @@ const Routes = () => {
   ]);
 
   const addToCart = (event) => {
-    setShoppingCart((shoppingCart) => [...shoppingCart, event]);
+    let cartCopy = shoppingCart.filter((cart) => cart.id !== event.id);
+    if (shoppingCart[event.id] === cartCopy[event.id]) {
+      setShoppingCart((shoppingCart) => [...shoppingCart, event]);
+    } else {
+      alert('Item has already been added to Cart');
+    }
   };
 
   const removeFromCart = (event) => {
     let cartCopy = [...shoppingCart];
     cartCopy = cartCopy.filter((cartItem) => cartItem.id !== event.id);
     setShoppingCart(cartCopy);
+  };
+
+  const addQuantity = (item) => {
+    item.amount += 1;
+    setShoppingCart([...shoppingCart]);
+  };
+
+  const removeQuantity = (item) => {
+    if (item.amount > 1) {
+      item.amount -= 1;
+    } else {
+      alert("Item can't have less than one in quantity, please delete item.");
+    }
+    setShoppingCart([...shoppingCart]);
   };
 
   return (
@@ -85,7 +89,14 @@ const Routes = () => {
         <Route
           exact
           path="/cart"
-          component={() => <Cart shoppingCart={shoppingCart} />}
+          component={() => (
+            <Cart
+              shoppingCart={shoppingCart}
+              onRemove={removeFromCart}
+              addQuantity={addQuantity}
+              removeQuantity={removeQuantity}
+            />
+          )}
         />
         <Route
           exact
@@ -94,7 +105,7 @@ const Routes = () => {
             <Shop
               products={products}
               shoppingCart={shoppingCart}
-              onClick={addToCart}
+              onAdd={addToCart}
             />
           )}
         />

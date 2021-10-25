@@ -5,13 +5,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Footer from '../Footer';
 
-const Shop = ({ products, shoppingCart, onClick }) => {
-  // const addToCart = (event) => {
-  //   console.log(event.target.value);
-  //   setShoppingCart((shoppingCart) => [...shoppingCart, event.target.value]);
-  //   console.log(shoppingCart);
-  // };
-
+const Shop = ({ products, onAdd }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const handleNavbar = () => {
@@ -36,16 +30,19 @@ const Shop = ({ products, shoppingCart, onClick }) => {
         <img src="./images/shop/greencouch.jpg" alt="leather couch"></img>
         <div className="grid grid-cols-2 gap-3 justify-items-center pt-4 mx-4">
           {products.map((product) => {
-            return (
-              <ShopCard
-                key={product.id}
-                value={product}
-                title={product.title}
-                text={product.text}
-                image={product.image}
-                clickAdd={() => onClick(product)}
-              />
-            );
+            if (products.length === 0) {
+              return <h1>Cart Empty</h1>;
+            } else
+              return (
+                <ShopCard
+                  key={product.id}
+                  value={product}
+                  title={product.title}
+                  text={product.text}
+                  image={product.image}
+                  clickAdd={() => onAdd(product)}
+                />
+              );
           })}
         </div>
       </div>

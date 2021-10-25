@@ -1,5 +1,5 @@
 //Shopping Card Component, layout of image, title, text, buttons for adding to cart
-const ShopCard = ({ title, text, image, item, clickAdd }) => {
+const ShopCard = ({ title, text, image, item, clickAdd, clickRemove }) => {
   return (
     <div className="flex flex-col w-full h-full border-black rounded-lg text-center shadow-lg">
       <img className="pb-4 w-full h-full rounded-lg" src={image} alt="" />
