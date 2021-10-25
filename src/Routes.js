@@ -13,7 +13,7 @@ const Routes = () => {
       id: 0,
       title: 'Modern Cabinet',
       text: 'Styled Modern Wood Cabinet',
-      image: './images/shop/cabinet.jpeg',
+      image: '/images/shop/cabinet.jpeg',
       amount: 1,
     },
     {
