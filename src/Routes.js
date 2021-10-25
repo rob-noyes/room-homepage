@@ -13,42 +13,42 @@ const Routes = () => {
       id: 0,
       title: 'Modern Cabinet',
       text: 'Styled Modern Wood Cabinet',
-      image: './room-homepage/images/shop/cabinet.jpeg',
+      image: './images/shop/cabinet.jpeg',
       amount: 1,
     },
     {
       id: 1,
       title: 'Modern Dark Stool',
       text: 'Elegent Styled Modern Stool',
-      image: './room-homepage/images/shop/stool.jpg',
+      image: './images/shop/stool.jpg',
       amount: 1,
     },
     {
       id: 2,
       title: 'Nightstand',
       text: 'Elegent Styled Modern Stool',
-      image: './room-homepage/images/shop/nightstand.jpg',
+      image: './images/shop/nightstand.jpg',
       amount: 1,
     },
     {
       id: 3,
       title: 'Dresser',
       text: 'Mid Century Modern Dresser',
-      image: './room-homepage/images/shop/dresser.jpg',
+      image: './images/shop/dresser.jpg',
       amount: 1,
     },
     {
       id: 4,
       title: 'Pink Chair',
       text: 'Modern Pink Armchair',
-      image: './room-homepage/images/shop/pinkchair.jpg',
+      image: './images/shop/pinkchair.jpg',
       amount: 1,
     },
     {
       id: 5,
       title: 'Armless Chair',
       text: 'Sleek Retro Style Armless Chair',
-      image: './room-homepage/images/shop/armlesschair.jpg',
+      image: './images/shop/armlesschair.jpg',
       amount: 1,
     },
   ]);
@@ -86,10 +86,10 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/room-homepage" component={() => <App />} />
+        <Route exact path="/" component={() => <App />} />
         <Route
           exact
-          path="/room-homepage/cart"
+          path="/cart"
           component={() => (
             <Cart
               shoppingCart={shoppingCart}
@@ -101,7 +101,7 @@ const Routes = () => {
         />
         <Route
           exact
-          path="/room-homepage/shop"
+          path="/shop"
           component={() => (
             <Shop
               products={products}
@@ -110,8 +110,8 @@ const Routes = () => {
             />
           )}
         />
-        <Route exact Path="/room-homepage/about" component={About} />
-        <Route exact path="/room-homepage/contact" component={Contact} />
+        <Route exact Path="/about" component={About} />
+        <Route exact path="/contact" component={Contact} />
       </Switch>
     </BrowserRouter>
   );

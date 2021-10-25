@@ -22,7 +22,7 @@ const Header = ({ navbar, onClick }) => {
 
       <div className="flex w-screen justify-center text-4xl lg:flex lg:justify-start text-white lg:pt-8 lg:pl-12">
         <h3 className={navbar ? 'hidden ' : 'py-4 text-white'}>
-          <Link to="/room-homepage/">room</Link>
+          <Link to="/">room</Link>
         </h3>
       </div>
       <div className="lg:absolute lg:left-32 lg:px-4 lg:text-white lg:pt-14 lg:pl-16">
@@ -34,16 +34,16 @@ const Header = ({ navbar, onClick }) => {
           }
         >
           <li className="px-2 lg:px-4">
-            <Link to="/room-homepage/">home</Link>
+            <Link to="/">home</Link>
           </li>
           <li className="px-2 lg:px-4">
-            <Link to="/room-homepage/shop">shop</Link>
+            <Link to="/shop">shop</Link>
           </li>
           <li className="px-2 lg:px-4">
-            <Link to="/room-homepage/about">about</Link>
+            <Link to="/about">about</Link>
           </li>
           <li className="px-2 lg:px-4">
-            <Link to="/room-homepage/contact">contact</Link>
+            <Link to="/contact">contact</Link>
           </li>
         </ul>
       </div>

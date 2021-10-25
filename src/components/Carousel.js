@@ -59,25 +59,19 @@ const Carousel = () => {
             onClick={leftClick}
             className="bg-black px-6 py-4 lg:px-8 lg:py-6"
           >
-            <img
-              src="room-homepage/images/icon-angle-left.svg"
-              alt="arrow left"
-            />
+            <img src="images/icon-angle-left.svg" alt="arrow left" />
           </button>
           <button
             onClick={rightClick}
             className="bg-black px-6 py-4 lg:px-8 lg:py-6"
           >
-            <img
-              src="room-homepage/images/icon-angle-right.svg"
-              alt="arrow right"
-            />
+            <img src="images/icon-angle-right.svg" alt="arrow right" />
           </button>
         </div>
         <div className="pt-8 lg:my-middle lg:mb-12">
           <Tile header={currentImage.title} text={currentImage.text} />
           <div className="flex flex-row">
-            <Link to="/room-homepage/shop">
+            <Link to="/shop">
               <h3 className="text-sm px-8 mt-4 py-4 tracking-realwide flex lg:px-14">
                 SHOP NOW
                 <img className="px-6" src="./images/icon-arrow.svg" alt="" />
@@ -90,19 +84,13 @@ const Carousel = () => {
             onClick={leftClick}
             className="bg-black px-6 py-4 lg:px-8 lg:py-6"
           >
-            <img
-              src="room-homepage/images/icon-angle-left.svg"
-              alt="arrow left"
-            />
+            <img src="images/icon-angle-left.svg" alt="arrow left" />
           </button>
           <button
             onClick={rightClick}
             className="bg-black px-6 py-4 lg:px-8 lg:py-6"
           >
-            <img
-              src="room-homepage/images/icon-angle-right.svg"
-              alt="arrow right"
-            />
+            <img src="images/icon-angle-right.svg" alt="arrow right" />
           </button>
         </div>
       </div>

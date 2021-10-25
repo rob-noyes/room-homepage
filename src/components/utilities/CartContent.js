@@ -1,6 +1,6 @@
 import { FaTrash } from 'react-icons/fa';
 
-const CartContent = (cartItem, addQuantity, removeQuantity, onRemove) => {
+const CartContent = (cartItem) => {
   console.log(cartItem.cartItem);
   return (
     <div
