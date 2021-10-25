@@ -22,7 +22,7 @@ const Shop = ({ products, onAdd }) => {
             : 'fixed z-30 bg-gray-400 rounded-full bg-opacity-70 right-0 m-5 p-2 mt-9 text-2xl text-white'
         }
       >
-        <Link to="/cart">
+        <Link to="/room-homepage/cart">
           <FaShoppingCart />
         </Link>
       </div>

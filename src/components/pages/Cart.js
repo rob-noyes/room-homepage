@@ -19,7 +19,7 @@ const Cart = ({ shoppingCart, onRemove, addQuantity, removeQuantity }) => {
         <div className="h-32 bg-office bg-cover bg-center shadow-xl"></div>
         <div className="flex flex-row justify-start mx-4 mt-6">
           <button className="flex flex-row text-lg w-full">
-            <Link to="/shop">
+            <Link to="/room-homepage/shop">
               <MdArrowBackIos /> <span className="">Back to Shop</span>
             </Link>
           </button>

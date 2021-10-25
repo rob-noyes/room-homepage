@@ -86,10 +86,10 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={() => <App />} />
+        <Route exact path="/room-homepage" component={() => <App />} />
         <Route
           exact
-          path="/cart"
+          path="/room-homepage/cart"
           component={() => (
             <Cart
               shoppingCart={shoppingCart}
@@ -101,7 +101,7 @@ const Routes = () => {
         />
         <Route
           exact
-          path="/shop"
+          path="/room-homepage/shop"
           component={() => (
             <Shop
               products={products}
@@ -110,8 +110,8 @@ const Routes = () => {
             />
           )}
         />
-        <Route exact Path="/about" component={About} />
-        <Route exact path="/contact" component={Contact} />
+        <Route exact Path="/room-homepage/about" component={About} />
+        <Route exact path="/room-homepage/contact" component={Contact} />
       </Switch>
     </BrowserRouter>
   );

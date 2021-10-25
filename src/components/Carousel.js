@@ -71,7 +71,7 @@ const Carousel = () => {
         <div className="pt-8 lg:my-middle lg:mb-12">
           <Tile header={currentImage.title} text={currentImage.text} />
           <div className="flex flex-row">
-            <Link to="/shop">
+            <Link to="/room-homepage/shop">
               <h3 className="text-sm px-8 mt-4 py-4 tracking-realwide flex lg:px-14">
                 SHOP NOW
                 <img className="px-6" src="./images/icon-arrow.svg" alt="" />
