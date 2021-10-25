@@ -27,7 +27,10 @@ const Shop = ({ products, onAdd }) => {
         </Link>
       </div>
       <div className={navbarOpen ? ' h-screen z-20 opacity-20' : ''}>
-        <img src="./images/shop/greencouch.jpg" alt="leather couch"></img>
+        <img
+          src="./room-homepage/images/shop/greencouch.jpg"
+          alt="leather couch"
+        ></img>
         <div className="grid grid-cols-2 gap-3 justify-items-center pt-4 mx-4">
           {products.map((product) => {
             if (products.length === 0) {
