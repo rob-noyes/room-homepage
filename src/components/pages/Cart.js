@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { MdArrowBackIos } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import CartContent from '../utilities/CartContent';
-import Footer from '../Footer';
 
 const Cart = ({ shoppingCart, onRemove, addQuantity, removeQuantity }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -24,6 +23,11 @@ const Cart = ({ shoppingCart, onRemove, addQuantity, removeQuantity }) => {
                 <MdArrowBackIos />
                 <span className="">Back to Shop</span>
               </Link>
+            </button>
+          </div>
+          <div className="flex justify-center text-2xl">
+            <button className="flex items-center p-4 shadow-xl rounded-full">
+              Checkout
             </button>
           </div>
           <div className="grid grid-cols-2 gap-2 justify-items-center pt-4 mx-4 p-2 md:grid-cols-3 md:gap-16 md:mx-32 md:my-16">

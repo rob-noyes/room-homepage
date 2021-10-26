@@ -42,9 +42,9 @@ const Header = ({ navbar, onClick }) => {
           <li className="px-2 lg:px-4">
             <Link to="/about">about</Link>
           </li>
-          <li className="px-2 lg:px-4">
+          {/* <li className="px-2 lg:px-4">
             <Link to="/contact">contact</Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>
