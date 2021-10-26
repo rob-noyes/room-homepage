@@ -48,13 +48,13 @@ const About = () => {
             appointment and see all we have to offer. We have specialists ready
             to show you different pieces or set up a room just for you.
           </p>
-          <ul className="flex flex-col justify-center">
+          <ul className="flex flex-col justify-center items-center ">
             <li>Call us at: 555-543-3251</li>
-            <li>Follow us on Instagram</li>
-            <li>Email us at email@room-homeroom.com</li>
+            <li className="p-4">Follow us on Instagram</li>
+            <li>Come to our showroom!</li>
           </ul>
           <img
-            className="max-w-2xl mt-12 rounded-md"
+            className="max-w-xs md:max-w-2xl mt-12 rounded-md"
             src="./room-homepage/images/about/chairpillow.jpg"
             alt=""
           />

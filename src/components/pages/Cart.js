@@ -25,8 +25,8 @@ const Cart = ({ shoppingCart, onRemove, addQuantity, removeQuantity }) => {
               </Link>
             </button>
           </div>
-          <div className="flex justify-center text-2xl">
-            <button className="flex items-center p-4 shadow-xl rounded-full">
+          <div className="flex justify-center text-xl">
+            <button className="bg-gray-50 flex items-center p-3 shadow-lg rounded-full">
               Checkout
             </button>
           </div>

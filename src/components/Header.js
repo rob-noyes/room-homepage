@@ -29,7 +29,7 @@ const Header = ({ navbar, onClick }) => {
         <ul
           className={
             navbar
-              ? ' transition-all duration-500 flex flex-row w-screen justify-end text-lg h-20 pr-2 items-center '
+              ? ' transition-all duration-500 flex flex-row w-screen justify-center text-lg h-20 pr-2 items-center '
               : ' transition-all duration-500 hidden lg:flex '
           }
         >
