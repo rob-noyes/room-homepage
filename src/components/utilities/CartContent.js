@@ -16,7 +16,7 @@ const CartContent = (cartItem) => {
       <div>
         <button
           className="px-3 m-2 py-1 shadow-md rounded-full"
-          onClick={cartItem.addQuantity}
+          onClick={() => cartItem.addQuantity()}
         >
           +
         </button>

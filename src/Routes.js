@@ -54,7 +54,8 @@ const Routes = () => {
   ]);
 
   const addToCart = (event) => {
-    let cartCopy = shoppingCart.filter((cart) => cart.id !== event.id);
+    let cartCopy = shoppingCart.map((item) => item.id);
+    console.log(cartCopy);
     if (shoppingCart[event.id] === cartCopy[event.id]) {
       setShoppingCart((shoppingCart) => [...shoppingCart, event]);
     } else {

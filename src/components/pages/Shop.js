@@ -34,19 +34,16 @@ const Shop = ({ products, onAdd }) => {
         ></img>
         <div className="grid grid-cols-2 gap-3 justify-items-center pt-4 mx-4 my-8 md:grid-cols-3 md:gap-16 md:mx-32 md:my-16">
           {products.map((product) => {
-            if (products.length === 0) {
-              return <h1>Cart Empty</h1>;
-            } else
-              return (
-                <ShopCard
-                  key={product.id}
-                  value={product}
-                  title={product.title}
-                  text={product.text}
-                  image={product.image}
-                  clickAdd={() => onAdd(product)}
-                />
-              );
+            return (
+              <ShopCard
+                key={product.id}
+                value={product}
+                title={product.title}
+                text={product.text}
+                image={product.image}
+                clickAdd={() => onAdd(product)}
+              />
+            );
           })}
         </div>
       </div>
