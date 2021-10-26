@@ -1,5 +1,5 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import App from './App';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
@@ -10,42 +10,42 @@ const Routes = () => {
   const [shoppingCart, setShoppingCart] = useState([]);
   const [products] = useState([
     {
-      id: 0,
+      id: 1,
       title: 'Modern Cabinet',
       text: 'Styled Modern Wood Cabinet',
       image: './room-homepage/images/shop/cabinet.jpeg',
       amount: 1,
     },
     {
-      id: 1,
+      id: 2,
       title: 'Modern Dark Stool',
       text: 'Elegent Styled Modern Stool',
       image: './room-homepage/images/shop/stool.jpg',
       amount: 1,
     },
     {
-      id: 2,
+      id: 3,
       title: 'Nightstand',
       text: 'Elegent Styled Modern Stool',
       image: './room-homepage/images/shop/nightstand.jpg',
       amount: 1,
     },
     {
-      id: 3,
+      id: 4,
       title: 'Dresser',
       text: 'Mid Century Modern Dresser',
       image: './room-homepage/images/shop/dresser.jpg',
       amount: 1,
     },
     {
-      id: 4,
+      id: 5,
       title: 'Pink Chair',
       text: 'Modern Pink Armchair',
       image: './room-homepage/images/shop/pinkchair.jpg',
       amount: 1,
     },
     {
-      id: 5,
+      id: 6,
       title: 'Armless Chair',
       text: 'Sleek Retro Style Armless Chair',
       image: './room-homepage/images/shop/armlesschair.jpg',
@@ -54,9 +54,11 @@ const Routes = () => {
   ]);
 
   const addToCart = (event) => {
-    let cartCopy = shoppingCart.map((item) => item.id);
-    console.log(cartCopy);
-    if (shoppingCart[event.id] === cartCopy[event.id]) {
+    let cartCopy = shoppingCart.map((event) => event.id);
+    if (
+      shoppingCart[event.id] === undefined ||
+      shoppingCart[event.id] === cartCopy[event]
+    ) {
       setShoppingCart((shoppingCart) => [...shoppingCart, event]);
     } else {
       alert('Item has already been added to Cart');

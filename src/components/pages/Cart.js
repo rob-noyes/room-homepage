@@ -30,6 +30,7 @@ const Cart = ({ shoppingCart, onRemove, addQuantity, removeQuantity }) => {
             {shoppingCart.map((cartItem) => {
               return (
                 <CartContent
+                  key={cartItem.id}
                   removeQuantity={() => removeQuantity(cartItem)}
                   addQuantity={() => addQuantity(cartItem)}
                   cartItem={cartItem}

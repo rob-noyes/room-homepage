@@ -1,7 +1,6 @@
 import React from 'react';
 //Shopping Card Component, layout of image, title, text, buttons for adding to cart
 const ShopCard = ({ title, text, image, value, clickAdd }) => {
-  console.log(value.id);
   return (
     <div
       className="flex flex-col w-full h-full border-black rounded-lg text-center shadow-lg md:max-w-lg md:max-h-lg"
