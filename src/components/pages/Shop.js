@@ -54,4 +54,4 @@ const Shop = ({ products, onAdd }) => {
   );
 };
 
-export default Shop;
+export default React.memo(Shop);
