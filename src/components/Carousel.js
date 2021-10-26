@@ -80,7 +80,11 @@ const Carousel = () => {
             <Link to="/shop">
               <h3 className="text-sm px-8 mt-4 py-4 tracking-realwide flex lg:px-14">
                 SHOP NOW
-                <img className="px-6" src="./images/icon-arrow.svg" alt="" />
+                <img
+                  className="px-6"
+                  src="./room-homepage/images/icon-arrow.svg"
+                  alt=""
+                />
               </h3>
             </Link>
           </div>
