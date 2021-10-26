@@ -30,8 +30,9 @@ const Shop = ({ products, onAdd }) => {
         <img
           src="./room-homepage/images/shop/greencouch.jpg"
           alt="leather couch"
+          className="md:h-64 md:w-full md:object-cover"
         ></img>
-        <div className="grid grid-cols-2 gap-3 justify-items-center pt-4 mx-4">
+        <div className="grid grid-cols-2 gap-3 justify-items-center pt-4 mx-4 my-8 md:grid-cols-3 md:gap-16 md:mx-32 md:my-16">
           {products.map((product) => {
             if (products.length === 0) {
               return <h1>Cart Empty</h1>;
