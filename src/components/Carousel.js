@@ -59,13 +59,19 @@ const Carousel = () => {
             onClick={leftClick}
             className="bg-black px-6 py-4 lg:px-8 lg:py-6"
           >
-            <img src="images/icon-angle-left.svg" alt="arrow left" />
+            <img
+              src="room-homepage/images/icon-angle-left.svg"
+              alt="arrow left"
+            />
           </button>
           <button
             onClick={rightClick}
             className="bg-black px-6 py-4 lg:px-8 lg:py-6"
           >
-            <img src="images/icon-angle-right.svg" alt="arrow right" />
+            <img
+              src="room-homepage/images/icon-angle-right.svg"
+              alt="arrow right"
+            />
           </button>
         </div>
         <div className="pt-8 lg:my-middle lg:mb-12">
@@ -84,13 +90,19 @@ const Carousel = () => {
             onClick={leftClick}
             className="bg-black px-6 py-4 lg:px-8 lg:py-6"
           >
-            <img src="images/icon-angle-left.svg" alt="arrow left" />
+            <img
+              src="room-homepage/images/icon-angle-left.svg"
+              alt="arrow left"
+            />
           </button>
           <button
             onClick={rightClick}
             className="bg-black px-6 py-4 lg:px-8 lg:py-6"
           >
-            <img src="images/icon-angle-right.svg" alt="arrow right" />
+            <img
+              src="room-homepage/images/icon-angle-right.svg"
+              alt="arrow right"
+            />
           </button>
         </div>
       </div>
